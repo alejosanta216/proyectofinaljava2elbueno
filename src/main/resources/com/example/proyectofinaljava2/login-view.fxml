@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane prefHeight="620.0" prefWidth="540.0" style="-fx-background-color: linear-gradient(to bottom right, #1f3b57, #2e6da4);"
+           xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.proyectofinaljava2.controller.LoginController">
+   <children>
+      <VBox maxHeight="560.0" maxWidth="440.0" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #dde3ea; -fx-border-radius: 8;">
+         <children>
+            <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1f3b57;" text="Aparta-Suites UQ" />
+            <Label style="-fx-text-fill: #6b7785;" text="Sistema de Gestion de Alojamiento - Salento" />
+            <TabPane tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+               <tabs>
+                  <Tab text="Iniciar sesion">
+                     <content>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="Usuario" />
+                              <TextField fx:id="txtUsuario" promptText="Ingrese su usuario" />
+                              <Label text="Contrasena" />
+                              <PasswordField fx:id="pfContrasena" onAction="#iniciarSesion" promptText="Ingrese su contrasena" />
+                              <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#iniciarSesion" style="-fx-background-color: #2e6da4; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6; -fx-cursor: hand;" text="Ingresar" />
+                              <Label fx:id="lblMensaje" style="-fx-text-fill: #c0392b;" wrapText="true" />
+                              <Separator />
+                              <Label style="-fx-text-fill: #6b7785;" text="Usuarios de prueba:&#10;admin / admin123  -  recepcion / recep123  -  ana / ana123" wrapText="true" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab text="Crear cuenta de huesped">
+                     <content>
+                        <VBox spacing="8.0">
+                           <children>
+                              <GridPane hgap="10.0" vgap="8.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints minWidth="120.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" />
+                                 </columnConstraints>
+                                 <children>
+                                    <Label text="Nombre completo" />
+                                    <TextField fx:id="txtRegNombre" GridPane.columnIndex="1" />
+                                    <Label text="Documento" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtRegDocumento" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="Fecha nacimiento" GridPane.rowIndex="2" />
+                                    <DatePicker fx:id="dpRegNacimiento" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Telefono" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtRegTelefono" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="Correo" GridPane.rowIndex="4" />
+                                    <TextField fx:id="txtRegCorreo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label text="Usuario" GridPane.rowIndex="5" />
+                                    <TextField fx:id="txtRegUsuario" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label text="Contrasena" GridPane.rowIndex="6" />
+                                    <PasswordField fx:id="pfRegContrasena" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                 </children>
+                              </GridPane>
+                              <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#registrarse" style="-fx-background-color: #2e6da4; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6; -fx-cursor: hand;" text="Crear cuenta" />
+                              <Label fx:id="lblMensajeRegistro" style="-fx-text-fill: #c0392b;" wrapText="true" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>
